@@ -7,6 +7,9 @@
     <div class="container row">
       <Card v-for="post in posts" :key="post.id" :post="post" class="ml-auto mr-auto" />
     </div>
+    <!-- <pre>
+      {{posts}}
+    </pre> -->
   </div>
 </template>
 
@@ -29,7 +32,7 @@
 		},
 		data() {
 			return {
-				posts: ''
+				posts: []
 			}
 		},
 		// async asyncData() {
@@ -39,7 +42,7 @@
 
 
       async asyncData({ $axios}) {
-    const { data } = await $axios.$get(`/post/`)
+    let  data  = await $axios.$get(`/post/`)
     return {posts: data}
   },
 		head: {

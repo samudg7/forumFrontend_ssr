@@ -56,9 +56,13 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-
+    "@nuxtjs/axios"
   ],
 
+  axios: {
+    // See https://github.com/nuxt-community/axios-module#options
+    baseURL: "http://127.0.0.1:8000/api"
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

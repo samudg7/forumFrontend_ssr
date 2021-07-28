@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <h2>Making API request - the Vue way</h2>
+      <h2>Lista dei feedback</h2>
       <hr>
     </div>
     <div class="container row">
@@ -41,12 +41,12 @@
 		// },
 
 
-      async asyncData({ $axios}) {
+    async asyncData({ $axios}) {
     let  data  = await $axios.$get(`/post/`)
     return {posts: data}
   },
 		head: {
-			title: 'List of Posts'
+			title: 'Lista dei feedback'
 		}
 	}
 </script>

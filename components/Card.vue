@@ -8,9 +8,6 @@
         <h5 class="card-title">{{post.name}}</h5>
         <h5 class="card-title">{{post.created_at}}</h5>
        <button @click="destroy(post.id)" class="btn btn-outline-danger fa fa-trash fa-2x pull-right">
-<!-- <v-btn rounded color="#F93154" @click="destroy(post.id)"> -->
-                  <!-- Delete -->
-                  <!-- <v-icon color="orange">delete</v-icon> -->
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -41,9 +38,8 @@
 
     async destroy(id) {
         await this.$axios.$delete(`/post/${id}`)
-        this.$router.push('/createPost')
-        this.$router.push('/posts')
-
+         this.$router.push('/createPost')
+         this.$router.push('/posts')
 
       }
       }

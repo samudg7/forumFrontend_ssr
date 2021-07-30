@@ -9,11 +9,11 @@
       </div>
       <div class="form-group">
         <label><strong>Descrizione</strong></label>
-        <textarea v-model="form.body" class="form-control" rows="5"></textarea>
+        <textarea v-model="form.body" class="form-control" rows="5" placeholder="Inserisci la descrizione" autofocus></textarea>
       </div>
        <div class="form-group">
         <label><strong>Autore</strong></label>
-        <textarea v-model="form.name" class="form-control" rows="5"></textarea>
+        <textarea v-model="form.name" class="form-control" rows="5" placeholder="Inserisci l'autore" autofocus></textarea>
       </div>
       <button type="submit" class="btn btn-primary" :disabled="disabled">Create</button>
     </form>

@@ -42,7 +42,7 @@
 
 
     async asyncData({ $axios}) {
-    let  data  = await $axios.$get(`/post/`)
+    let  {data}  = await $axios.$get(`/post/`)
     return {posts: data}
   },
 		head: {

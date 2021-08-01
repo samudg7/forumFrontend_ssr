@@ -1,6 +1,6 @@
 <template>
   <div class="container col-md-6 mt-5">
-    <h2>Crea un nuovo feedback</h2>
+    <h1>Crea un nuovo feedback</h1>
     <br>
     <form @submit.prevent="createPost">
       <div class="form-group">
@@ -15,7 +15,14 @@
         <label><strong>Autore</strong></label>
         <textarea v-model="form.name" class="form-control" rows="5" placeholder="Inserisci l'autore" autofocus></textarea>
       </div>
-      <button type="submit" class="btn btn-primary" :disabled="disabled">Create</button>
+      <!-- <button type="submit" class="btn btn-secondary" :disabled="disabled" style="margin: 70px; margin-left: 0px">Create</button> -->
+      <v-btn
+        color="#64B5F6"
+        style="margin-bottom: 70px; margin-top: 30px"
+        type="submit"
+        :disabled="disabled"
+        >Create</v-btn
+      >
     </form>
   </div>
 </template>
@@ -48,4 +55,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Volkhov&display=swap');
+h1{
+  font-family: 'Volkhov', serif;
+}
+</style>

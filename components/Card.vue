@@ -1,12 +1,14 @@
 <template>
   <div>
     <div class="card bg-light mb-3" style="max-width: 18rem;">
-      <div class="card-header">Post: {{post.id}}</div>
+      <div class="card-header">Recensione: {{post.id}}</div>
       <div class="card-body">
+         <p class="card-text">{{post.name}}</p>
         <h5 class="card-title">{{post.title}}</h5>
-        <h5 class="card-title">{{post.body}}</h5>
-        <h5 class="card-title">{{post.name}}</h5>
-        <h5 class="card-title">{{post.created_at}}</h5>
+        <h5 class="card-subtitle mb-2 text-muted">{{post.created_at}}</h5>
+        <p class="card-text">{{post.body}}</p>
+
+
        <button @click="destroy(post.id)" class="btn btn-outline-danger fa fa-trash fa-2x pull-right">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

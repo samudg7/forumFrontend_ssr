@@ -3,15 +3,17 @@ export default {
   mode: "universal",
 
   head: {
-    title: 'learning',
+    title: 'Test Sync Lab',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: 'Forum application post' },
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: "keywords", content:"HTML, CSS, JavaScript, php, Laravel, Vue.js, Nuxt, server side render, Universal"},
+      { name: "author", content:"Sync Lab"}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -52,13 +54,20 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+     // Simple usage
+     '@nuxtjs/vuetify'
+
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-
+    "@nuxtjs/axios"
   ],
 
+  axios: {
+    // See https://github.com/nuxt-community/axios-module#options
+    baseURL: "http://127.0.0.1:8000/api"
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
